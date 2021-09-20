@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block header %}
+<h1>{% block title %}{% endblock %}</h1>
+{% if g.user %}
+{% endif %} 
+{% endblock %} 
+{% block content %}
+<div class="row">
+<div class=col-md-6>
+  Forsiden av appen vår 
+</div>
+<div class=col-md-6>
+  Her skal det skje mye moro
+</div>
+</div>
+
+{% endblock %}
