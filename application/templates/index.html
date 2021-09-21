@@ -6,12 +6,16 @@
 {% endblock %} 
 {% block content %}
 <div class="row">
-<div class=col-md-6>
-  Forsiden av appen vår 
-</div>
-<div class=col-md-6>
-  Her skal det skje mye moro
-</div>
+<div class=col-md-12>
+<ul>
+  <li><a href="{{ url_for('auth.index') }}">Inlogging m.m.</a></li>
+  <li><a href="{{ url_for('user.index') }}">Brukersiden</a></li>
+  <li><a href="{{ url_for('top.index') }}">Toplister</a></li>
+  <li><a href="{{ url_for('page.privacy') }}">Personvern</a></li>
+  <li><a href="{{ url_for('page.about') }}">Om oss</a></li>
+</ul>
+
+ 
 </div>
 
 {% endblock %}

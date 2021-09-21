@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block header %}
+<h1>{% block title %}{% endblock %}</h1>
+{% if g.user %}
+{% endif %} 
+{% endblock %} 
+{% block content %}
+<div class="row">
+<div class=col-md-12>
+  {#
+    https://flask-login.readthedocs.io/en/latest/
+    #}
+  Innlogging 
+
+{% endblock %}

@@ -35,9 +35,13 @@ def create_app(test_config=None):
     db.init_app(app)
 
     # apply the blueprints to the app
-    from application import index
+    from application import auth, user, top, page, index
 
-    
+
+    app.register_blueprint(auth.bp)
+    app.register_blueprint(user.bp)
+    app.register_blueprint(top.bp)
+    app.register_blueprint(page.bp)
     app.register_blueprint(index.bp)
   
 

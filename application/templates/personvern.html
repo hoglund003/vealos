@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block header %}
+<h1>{% block title %}{% endblock %}</h1>
+{% if g.user %}
+{% endif %} 
+{% endblock %} 
+{% block content %}
+<div class="row">
+<div class=col-md-12>
+  {# 
+    Finn ut hva en bør skrive: 
+    https://www.google.com/search?q=personvern+tekst&rlz=1C1GCEU_noNO883NO883&oq=personvern+tekst 
+    #}
+
+
+  <h1>Personvern</h1>
+</div>
+
+{% endblock %}
