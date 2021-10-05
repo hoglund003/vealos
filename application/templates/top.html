@@ -1,18 +1,83 @@
 {% extends 'base.html' %}
 {% block header %}
-<h1>{% block title %}{% endblock %}</h1>
-{% if g.user %}
-{% endif %} 
-{% endblock %} 
-{% block content %}
-<div class="row">
-<div class=col-md-12>
-  {#
-Se litt på prosjektet fra i fjor db.py
-https://github.com/sauce71/topp52
-#}
+<h1>Toppliste</h1>
+{# https://getbootstrap.com/docs/4.0/components/navs/ #}
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link active" href="{{url_for('top.top', interval='year')}}">År</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="{{url_for('top.top', interval='month')}}">Måned</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="{{url_for('top.top', interval='week')}}">Uke</a>
+  </li>
+</ul>
 
-  Topplister 
-</div>
+{% endblock %}
+
+{% block content %}
+
+<h2>Topp i år</h2>
+<table class="table">
+  <thead>
+    <tr>
+      <td>#</td>
+      <td>Brukernavn</td>
+      <td>Antall turer</td>
+    </tr>
+  </thead>
+  <tbody>
+    {% for user in top_users_year %}
+    <tr>
+      <td>x</td>
+      <td>{{ user["username"] }}</td>
+      {# TODO: Få inn for resten #}
+      <td>{{ user["count_tours"] }}</td>
+    </tr>
+    {% endfor %} 
+  </tbody>
+</table>
+
+<h2>Topp denne måneden</h2>
+<table>
+  <thead>
+    <tr>
+      <td>#</td>
+      <td>Brukernavn</td>
+      <td>Antall turer</td>
+    </tr>
+  </thead>
+  <tbody>
+    {% for user in top_users_month %}
+    <tr>
+      <td>x</td>
+      <td>{{user["username"]}}</td>
+      <td>{{[]}}</td>
+    </tr>
+    {% endfor %} 
+  </tbody>
+</table>
+
+<h2>Topp denne uka</h2>
+<table>
+  <thead>
+    <tr>
+      <td>#</td>
+      <td>Brukernavn</td>
+      <td>Antall turer</td>
+    </tr>
+  </thead>
+  <tbody>
+    {% for user in top_users_week %}
+    <tr>
+      <td>x</td>
+      <td>{{user["username"]}}</td>
+      <td>{{[]}}</td>
+    </tr>
+    {% endfor %} 
+  </tbody>
+</table>
+
 
 {% endblock %}

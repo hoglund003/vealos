@@ -45,6 +45,22 @@ def get_user(user_id):
     db = get_db()
     return db.execute(q, (user_id,)).fetchone()
 
+def get_top_users(date_from, date_to):
+    q = """
+    select t.user_id, u.username, count(*) count_tours
+    from tours t
+    join users u on u.id = t.user_id
+    WHERE
+    t.tour_date >= ? and t.tour_date <= ?
+    group by t.user_id
+    order by count(*) DESC
+    limit 50
+    """
+    # TODO: Filtrer ut bare de som har gitt tillatelse til å vises i listen
+    # TODO: Må legge til initial tours om det er hele året
+    db = get_db()
+    return db.execute(q, (date_from, date_to,)).fetchall()
+
 
 
 @click.command("init-db")
