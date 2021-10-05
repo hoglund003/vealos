@@ -5,13 +5,34 @@
 {% endif %} 
 {% endblock %} 
 {% block content %}
-<div class="row">
-<div class=col-md-12>
-  <h1>Om oss</h1>>
-  {# 
-    Tekst kan hentes her https://www.facebook.com/groups/705405436260988 
-    Sikkert fint med et bilde
-    #}
+
+<div class="topnav">
+  <a href="http://127.0.0.1:5000/#">Hjemmesiden</a>
+  <a href="http://127.0.0.1:5000/auth/">Innlogging</a>
+  <a href="http://127.0.0.1:5000/user/">Brukersiden</a>
+  <a href="http://127.0.0.1:5000/top/">Toplister</a>
+  <a href="http://127.0.0.1:5000/page/personvern">Personvern</a>
+  <a class="active" href="http://127.0.0.1:5000/page/om-oss">Om oss</a>
+</div>
+
+<div class="about-section">
+  <h1>Om Oss</h1>
+  
+</div>
+
+<div class="card">
+  <div class="container">
+    <h2 style="text-align:center">Om Vealøs gruppen</h2>
+    <p>Gruppen er for alle, enten du går, løper, sykler eller kommer deg opp på annen måte!
+        Bruk siden til å dele egne resultater, bilder og finne motivasjon ved å følge andre.
+        Ønsker du selskap av flere på turene dine, eller trenger litt "drahjelp".. Skriv et innlegg om når du tenker å gå på tur, så kanskje flere henger seg på 😀
+        FORMÅLET ER Å FÅ FLEST MULIG TIL Å KOMME TIL TOPPEN 52 GANGER 😀
+        Gruppen har egen grønn postkasse på toppen med bok til å skrive opp turene godt merket med "Lealøs på Vealøs" 😉
+        Ønsker alle medlemmer et riktig godt lealøst år på Vealøs 2021 😀</p>
+      <a href="https://www.facebook.com/groups/705405436260988" target="_blank">
+        <button class="button">Facebook gruppen</button>
+      </a>
+  </div>
 </div>
 
 {% endblock %}

@@ -5,38 +5,75 @@
 {% endif %} 
 {% endblock %} 
 {% block content %}
-<div class="row">
-<div class=col-md-12>
-<h1>Lealøs på Vealøs Toppbok</h1>
-<div class="row">
-  <div class="col-md-12">
-    <div class="form-group">
-<form method="post">
-    <label for="tour_date">Dato</label>
-    <input type="date" id="tour_date" name="tour_date" class="form-control"
-       value="{{ today }}"
-       min="2021-01-01" max="{{ today }}">
-       <input type="submit" class="btn btn-primary" value="Registrer tur">
-  </form>
-</div>
-  </div>
-  </div>
-<p>
-Du har gått 35 turer i år
-</p>
-<p>
-Registrer tur
-</p>
-<p>
-Logg inn
-</p>
-<p>
-  Registrer deg
-</p>
-<p>
-Siste turer
-</p>
 
+<div class="topnav">
+  <a class="active" href="http://127.0.0.1:5000/#">Hjemmesiden</a>
+  <a href="http://127.0.0.1:5000/auth/">Innlogging</a>
+  <a href="http://127.0.0.1:5000/user/">Brukersiden</a>
+  <a href="http://127.0.0.1:5000/top/">Toplister</a>
+  <a href="http://127.0.0.1:5000/page/personvern">Personvern</a>
+  <a href="http://127.0.0.1:5000/page/om-oss">Om oss</a>
+</div>
+
+<div class="hjemmesiden-section">
+  <h1>Hjemmesiden</h1>
+</div>
+
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <div class="container">
+        <h2>Innlogging</h2>
+      <a href="http://127.0.0.1:5000/auth/">
+        <button class="button">Logg inn</button>
+      </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <div class="container">
+        <h2>Brukersiden</h2>
+      <a href="http://127.0.0.1:5000/user/">
+        <button class="button">Gå til brukersiden</button>
+      </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <div class="container">
+        <h2>Toplister</h2>
+      <a href="http://127.0.0.1:5000/top/">
+        <button class="button">Se toplistene</button>
+      </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <div class="container">
+        <h2>Personvern</h2>
+      <a href="http://127.0.0.1:5000/page/personvern">
+        <button class="button">Informasjon om personvern</button>
+      </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <div class="container">
+        <h2>Om Oss</h2>
+      <a href="http://127.0.0.1:5000/page/om-oss">
+        <button class="button">Om oss</button>
+      </a>
+      </div>
+    </div>
+  </div>
 </div>
 
 {% endblock %}

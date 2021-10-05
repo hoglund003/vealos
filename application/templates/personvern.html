@@ -5,15 +5,56 @@
 {% endif %} 
 {% endblock %} 
 {% block content %}
-<div class="row">
-<div class=col-md-12>
-  {# 
-    Finn ut hva en bør skrive: 
-    https://www.google.com/search?q=personvern+tekst&rlz=1C1GCEU_noNO883NO883&oq=personvern+tekst 
-    #}
 
-
-  <h1>Personvern</h1>
+<div class="topnav">
+  <a href="http://127.0.0.1:5000/#">Hjemmesiden</a>
+  <a href="http://127.0.0.1:5000/auth/">Innlogging</a>
+  <a href="http://127.0.0.1:5000/user/">Brukersiden</a>
+  <a href="http://127.0.0.1:5000/top/">Toplister</a>
+  <a class="active" href="http://127.0.0.1:5000/page/personvern">Personvern</a>
+  <a href="http://127.0.0.1:5000/page/om-oss">Om oss</a>
 </div>
 
+<div class="personvern-section">
+  <h1>Personvern for Vealøs</h1>
+  <p>Personvernet forklarer hvordan informasjonen din samles in, brukes og deles når du besøker Våre nettsider</p>
+</div>
+
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <div class="container">
+        <h2 style="text-align:center">Personlig informasjon vi samler</h2>
+        <p>"Sporing" Denne appen sporer din enhet med GPS(Global positioning system.)</p>
+        <p>"Loggfiler" og brukerkontoer, spore handlinger som skjer på nettstedet, og samle inn data inkludert din IP -adresse, nettlesertype, Internett -leverandør, henvisnings-/utgangssider og dato/klokkeslettstempler.</p>
+        <p>"Cookies" er datafiler som er plassert på enheten eller datamaskinen din og ofte inneholder en anonym unik identifikator. For mer informasjon om Cookies og hvordan du deaktiverer Cookies.</p>
+          <a href="http://www.allaboutcookies.org/" target="_blank">
+            <button class="button">Om cookies</button>
+          </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <div class="container">
+        <h2 style="text-align:center">Personlig bruker informasjon</h2>
+        <p>Når vi snakker om "personlig informasjon" i denne personvernerklæringen, snakker vi både om enhetsinformasjon og ordreinformasjon.</p>
+        <p>Vi bruker bestillingsinformasjonen som vi samler inn generelt for å oppfylle alle bestillinger som er lagt gjennom nettstedet (inkludert behandling av betalingsinformasjonen din, ordning for forsendelse og for å gi deg fakturaer og/eller ordrebekreftelser). I tillegg bruker vi denne bestillingsinformasjonen til:</p>
+        <p>Kommuniser med deg;
+          Screen våre bestillinger for potensiell risiko eller svindel; og
+          Når du er i tråd med preferansene du har delt med oss, skal du gi deg informasjon eller annonsering knyttet til våre produkter eller tjenester.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <div class="container">
+        <h2 style="text-align:center">Deling av din personlige informasjon</h2>
+        <p>Vi deler dine personlige opplysninger med tredjeparter for å hjelpe oss med å bruke dine personlige opplysninger, som beskrevet ovenfor.</p>
+        <p>For eksempel bruker vi Google Analytics for å hjelpe oss å forstå hvordan kundene våre bruker nettstedet - du kan lese mer om hvordan Google bruker din personlige informasjon her: <a href="https://www.google.com/intl/en/policies/privacy/" target="_blank">Privacy policy</a> Du kan også velge bort Google Analytics her: <a href="https://tools.google.com/dlpage/gaoptout" target="_blank">Google analytics</a>.</p>
+      </div>
+    </div>
+  </div>
 {% endblock %}

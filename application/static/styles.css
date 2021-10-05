@@ -1,0 +1,137 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  html {
+    box-sizing: border-box;
+  }
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  .column {
+    float: left;
+    width: 33.3%;
+    margin-bottom: 0px;
+    padding: 16px 16px;
+  }
+  
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(158, 34, 34, 0.2);
+    margin: 8px;
+  }
+  
+  .about-section {
+    padding: 30px;
+    text-align: center;
+    background-color: #4b7eec;
+    color: rgb(0, 0, 0);
+  }
+
+  .auth-section {
+    padding: 30px;
+    text-align: center;
+    background-color: #e42929;
+    color: rgb(0, 0, 0);
+  }
+
+  .personvern-section {
+    padding: 30px;
+    text-align: center;
+    background-color: #fff01f;
+    color: rgb(0, 0, 0);
+  }
+
+  .bruker-section {
+    padding: 30px;
+    text-align: center;
+    background-color: #a4ff2c;
+    color: rgb(0, 0, 0);
+  }
+
+  .top-section {
+    padding: 30px;
+    text-align: center;
+    background-color: #f1b534;
+    color: rgb(0, 0, 0);
+  }
+
+  .hjemmesiden-section {
+    padding: 30px;
+    text-align: center;
+    background-color: #89f134;
+    color: rgb(0, 0, 0);
+  }
+  
+  .container {
+    padding: 16px 10%;
+  }
+  
+  .container::after, .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  .title {
+    color: grey;
+  }
+  
+  .button {
+    border: none;
+    outline: 8px;
+    display: inline-block;
+    padding: 12px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .button:hover {
+    background-color: rgb(101, 223, 64);
+  }
+  
+  @media screen and (max-width: 650px) {
+    .column {
+      width: 100%;
+      display: block;
+    }
+  }
+
+  .topnav {
+    background-color: #333;
+    overflow: hidden;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 20px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  /* Add a color to the active/current link */
+  .topnav a.active {
+    background-color: #04AA6D;
+    color: white;
+  }
+
+  input[type=submit] {
+    align-self: start;
+    min-width: 10em;
+  }
