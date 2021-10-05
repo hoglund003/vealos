@@ -2,6 +2,8 @@ import os
 
 from flask import Flask
 
+from flask_login import LoginManager
+login_manager = LoginManager()
 
 def create_app(test_config=None):
     """Create and configure an instance of the Flask application."""
@@ -33,6 +35,10 @@ def create_app(test_config=None):
     # register the database commands
     from . import db
     db.init_app(app)
+
+    
+    login_manager.init_app(app) # app is a Flask object
+
 
     # apply the blueprints to the app
     from application import auth, user, top, page, index

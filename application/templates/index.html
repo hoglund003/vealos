@@ -7,15 +7,36 @@
 {% block content %}
 <div class="row">
 <div class=col-md-12>
-<ul>
-  <li><a href="{{ url_for('auth.index') }}">Inlogging m.m.</a></li>
-  <li><a href="{{ url_for('user.index') }}">Brukersiden</a></li>
-  <li><a href="{{ url_for('top.index') }}">Toplister</a></li>
-  <li><a href="{{ url_for('page.privacy') }}">Personvern</a></li>
-  <li><a href="{{ url_for('page.about') }}">Om oss</a></li>
-</ul>
+<h1>Lealøs på Vealøs Toppbok</h1>
+<div class="row">
+  <div class="col-md-12">
+    <div class="form-group">
+<form method="post">
+    <label for="tour_date">Dato</label>
+    <input type="date" id="tour_date" name="tour_date" class="form-control"
+       value="{{ today }}"
+       min="2021-01-01" max="{{ today }}">
+       <input type="submit" class="btn btn-primary" value="Registrer tur">
+  </form>
+</div>
+  </div>
+  </div>
+<p>
+Du har gått 35 turer i år
+</p>
+<p>
+Registrer tur
+</p>
+<p>
+Logg inn
+</p>
+<p>
+  Registrer deg
+</p>
+<p>
+Siste turer
+</p>
 
- 
 </div>
 
 {% endblock %}

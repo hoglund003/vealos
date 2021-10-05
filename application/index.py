@@ -11,6 +11,7 @@ from flask import current_app
 bp = Blueprint("index", __name__)
 
 @bp.route("/", methods=("GET", "POST"))
-def index():  
+def index():
+    today = date.today()
     return render_template("index.html", **locals())
 
