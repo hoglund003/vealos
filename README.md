@@ -7,7 +7,7 @@ Toppbok til Vealøs
 4. Lag enviroment (python -m venv env)
 5. Velg python versjon
 6. Test cmd
-7. installere Flask (pip install flask)
+7. Installere requirements (pip install -r requirements.txt)
 8. Åpne kommandolinjen og lag databasen 8Sjekk at det står env)
 9. flask init-db
 10. flask populate-db
