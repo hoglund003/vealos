@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% block header %}
+<h1>{% block title %}Rediger bruker{% endblock %}</h1>
+{% if g.user %}
+{% endif %}
+{% endblock %}
+{% block content %}
+
+<div class="row justify-content-center">
+    <div class="col-12">
+        <div class="p-3">
+            <img src="https://www.blexar.com/avatar.png" alt="Profilbilde" class="rounded-circle mx-auto d-block"
+                width="200rem">
+        </div>
+    </div>
+</div>
+<div class="row">
+    <form action="/update-user/{{ user['id'] }}" method="POST">
+        <div class="col-12">
+            <div class="rounded shadow p-2 w-100 mb-3">
+                <div class="row">
+                    <div class="col-3 align-self-center">
+                        <span class="text-muted fs-3 fw-bold">Navn: </span>
+                    </div>
+                    <div class="col">
+                        <div class="row">
+                            <div class="col">
+                                <input type="text" name="updated_username" class="fw-bold fs-1 form-control" value="{{ user['username'] }}">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="rounded shadow p-2 w-100 mb-3">
+                <div class="row">
+                    <div class="col align-self-center">
+                        <span class="text-muted fw-bold">E-post: </span>
+                        <input type="text" name="updated_email" class="fw-bold fs-10 form-control" value="{{ user['email'] }}">
+                    </div>
+                </div>
+            </div>
+            <div class="rounded shadow p-2 w-100 mb-3">
+                <div class="row">
+                    <div class="col-4 align-self-center">
+                        <span class="text-muted fs-2 fw-bold">Passord: </span>
+                    </div>
+                    <div class="col">
+                        <div class="row">
+                            <div class="col">
+                                <button type="button" class="btn btn-outline-secondary">Reset passord</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="rounded shadow p-2 w-100 mb-3">
+                <div class="row">
+                    <div class="col-4 align-self-center">
+                        <span class="text-muted fs-2 fw-bold">Turer: </span>
+                    </div>
+                    <div class="col">
+                        <div class="row">
+                            <div class="col">
+                                <button type="button" class="btn btn-outline-secondary">Se/endre turer</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-outline-secondary w-100 mb-3">Lagre</button>
+        </div>
+    </form>
+</div>
+
+{% endblock %}

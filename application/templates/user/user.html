@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% block header %}
+<h1>{% block title %}Bruker{% endblock %}</h1>
+{% if g.user %}
+{% endif %} 
+{% endblock %} 
+{% block content %}
+{#
+Se litt på prosjektet fra i fjor
+https://github.com/sauce71/topp52
+#}
+<div class="row justify-content-center">
+  <div class="col-12">
+    <div class="p-3">
+      <img src="https://www.blexar.com/avatar.png" alt="Profilbilde" class="rounded-circle mx-auto d-block" width="200rem">
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-12">
+    <button type="button" class="btn btn-outline-secondary w-100 mb-2" onclick="location.href='/edit-user/{{ userId }}'">Rediger</button>
+    <div class="rounded shadow p-2 w-100 mb-4">
+      <div class="row">
+        <div class="col-3 align-self-center">
+          <span class="text-muted fs-3 fw-bold">Navn:</span>
+        </div>
+        <div class="col">
+          <div class="row">
+            <div class="col">
+              <span class="fw-bold fs-1">{{ user['username'] }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="rounded shadow p-2 w-100">
+      <div class="row">
+        <div class="col align-self-center">
+          <span class="text-muted fs-3 fw-bold">Turer: </span>
+        </div>
+        <div class="col-4">
+          <div class="rounded border border-2">
+            <div class="text-center">
+              <span class="text-muted fw-bold">I år: </span>
+            </div>
+            <div class="text-center">
+              <span class="text-center fw-bold">{{ toursThisYear }}</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="rounded border border-2">
+            <div class="text-center">
+              <span class="text-muted fw-bold">Total: </span>
+            </div>
+            <div class="text-center">
+              <span class="text-center fw-bold">{{ totalTours }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
