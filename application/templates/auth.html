@@ -10,6 +10,13 @@
   {#
     https://flask-login.readthedocs.io/en/latest/
     #}
-  Innlogging 
+  <form method="POST">
+    <label>Skriv inn Emailen din:</label> <br>
+    <input type="email", name="email"> <br>
+    <label>Skriv inn passordet ditt:</label> <br>
+    <input type="password", name="password"> <br>
+    <input type="submit">
+    <a href="/forgot_password">Glemt passord</a>
+  </form>
 
 {% endblock %}
