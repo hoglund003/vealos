@@ -23,7 +23,7 @@ def index(userId=-1):
         # Fetching user, if it exists.
         user = db.execute('SELECT * FROM users WHERE id = ?', (userId)).fetchone()
     except:
-        return redirect(url_for('index', user))
+        return redirect(url_for('index'))
     tours = db.execute('SELECT * FROM tours WHERE user_id = ?', (userId)).fetchall()
 
     totalTours = 0
