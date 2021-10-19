@@ -61,14 +61,19 @@ def update(userId):
 
     updatedUsername = request.form['updated_username']
     updatedEmail = request.form['updated_email']
+    updatedVisible =request.form.get('updated_visible')
+    if not updatedVisible: # updateVisible can be none
+        updatedVisible = 0
 
     db.execute('''
-                UPDATE users 
-                SET username = ?, 
-                email = ? 
-                WHERE id = ?''',
-                (updatedUsername, updatedEmail, userId)
-                )
+        UPDATE users 
+        SET username = ?, 
+        email = ?,
+        visible = ? 
+        WHERE id = ?
+        ''',
+        (updatedUsername, updatedEmail, updatedVisible, userId)
+    )
     db.commit()
 
     return redirect(url_for('user.index', userId=userId))

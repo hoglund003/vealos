@@ -67,6 +67,25 @@
                     </div>
                 </div>
             </div>
+            <div class="rounded shadow p-2 w-100 mb-3">
+                <div class="row">
+                    <div class="col-4 align-self-center">
+                        <span class="text-muted fs-2 fw-bold">Synlig: </span>
+                    </div>
+                    <div class="col-8">
+                        <div class="form-check form-switch float-end">
+                            <!-- Define atribute "checked" -->
+                            {% if user['visible'] %}
+                                {% set visibleChecked = "checked" %}
+                            {% else %}
+                                {% set visibleChecked = "" %}
+                            {% endif %}
+                            
+                            <input class="form-check-input" type="checkbox" name="updated_visible" value="1" id="visible" {{ visibleChecked }}>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <button type="submit" class="btn btn-outline-secondary w-100 mb-3">Lagre</button>
         </div>
     </form>
